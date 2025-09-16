@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: main-deployment
+  name: shreeram
+  labels:
+    app: shreeram
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: test-application
+      app: shreeram
   template:
     metadata:
       labels:
-        app: test-application
+        app: shreeram
     spec:
       containers:
-        - name: first-pod
+        - name: shreeram
           image: ux007893/k8s-deployment:tagname
           ports:
             - containerPort: 5000   # Matches your Dockerfile
