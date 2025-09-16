@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: main-deploymeny
+  name: main-deployment
 spec:
- replicas: 4
- selector:
-  matchlablels:
-    app: test-application
- template:
-  metadata:
-    labeles:
-     app: test-application
-  spec:
-   containers:
-    - name: first-pod
-      image: ux007893/k8s-deployment:tagname
-      ports:
-       - containerPort: 80
+  replicas: 4
+  selector:
+    matchLabels:
+      app: test-application
+  template:
+    metadata:
+      labels:
+        app: test-application
+    spec:
+      containers:
+        - name: first-pod
+          image: ux007893/k8s-deployment:tagname
+          ports:
+            - containerPort: 5000   # Matches your Dockerfile
