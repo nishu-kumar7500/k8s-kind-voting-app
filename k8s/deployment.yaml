@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: main-deploymeny
+spec:
+ replicas: 4
+ selector:
+  matchlablels:
+    app: test-application
+ template:
+  metadata:
+    labeles:
+     app: test-application
+  spec:
+   containers:
+    - name: first-pod
+      image: nginx
+      ports:
+       - containerPort: 80
