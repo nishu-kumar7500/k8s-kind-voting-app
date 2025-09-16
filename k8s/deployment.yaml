@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: shreeram
-          image: ux007893/k8s-deployment:tagname
+          image: ux007893/k8s-deployment:774
           ports:
             - containerPort: 5000   # Matches your Dockerfile
